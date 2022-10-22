@@ -5,19 +5,10 @@ using UnityEngine;
 public class SpawnItems : MonoBehaviour
 {
     public float horizontalVariation;
-    public GameObject candy1, candy2, candy3, candy4;
-    public GameObject[] candies = new GameObject[4];
+    public GameObject[] items = new GameObject[8];
 
     private float totalTime;
     public float spawnerInterval;
-    
-    void Start()
-    {
-        candies[0] = candy1;
-        candies[1] = candy2;
-        candies[2] = candy3;
-        candies[3] = candy4;
-    }
     
     // Update is called once per frame
     void Update()
@@ -27,7 +18,7 @@ public class SpawnItems : MonoBehaviour
             Vector3 SpawnPos = new Vector3(Random.Range(-horizontalVariation, horizontalVariation),
                 transform.position.y, 0);
             
-            GameObject spawnedItem = Instantiate(candies[Random.Range(0, 3)], SpawnPos, Quaternion.identity);
+            GameObject spawnedItem = Instantiate(items[Random.Range(0, items.Length - 1)], SpawnPos, Quaternion.identity);
             totalTime = 0;
         }
 

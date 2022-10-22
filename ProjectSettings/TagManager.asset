@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Candy
   - Despawner
+  - BadItem
   layers:
   - Default
   - TransparentFX

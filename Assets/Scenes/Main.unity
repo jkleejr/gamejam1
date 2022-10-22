@@ -153,15 +153,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalVariation: 7.9
-  candy1: {fileID: 6963234453738123021, guid: 0dc87f60b5ab4ac4185a1a435cd6137c, type: 3}
-  candy2: {fileID: 3914198033411136533, guid: 33e91516d4066494dac031f9b197b76d, type: 3}
-  candy3: {fileID: 7499517103900049048, guid: 4611e328a765e2d4b96f11a174a4e17d, type: 3}
-  candy4: {fileID: 4069129121132738098, guid: 0c70268ef36765b408448813aee7c1b6, type: 3}
-  candies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  items:
+  - {fileID: 5161740791446353513, guid: 15f4ee0637f32b34fa13d5366796f48d, type: 3}
+  - {fileID: 518933277407054430, guid: 44da6e73d3fdd5840b942fea03315445, type: 3}
+  - {fileID: 6963234453738123021, guid: 0dc87f60b5ab4ac4185a1a435cd6137c, type: 3}
+  - {fileID: 3914198033411136533, guid: 33e91516d4066494dac031f9b197b76d, type: 3}
+  - {fileID: 3589292594674557271, guid: a9340984a47808b4d849323fcbae6c05, type: 3}
+  - {fileID: 7499517103900049048, guid: 4611e328a765e2d4b96f11a174a4e17d, type: 3}
+  - {fileID: 8890779268419535123, guid: bc92d7e46acfab04faa892237b7a7402, type: 3}
+  - {fileID: 4069129121132738098, guid: 0c70268ef36765b408448813aee7c1b6, type: 3}
   spawnerInterval: 2
 --- !u!4 &345031344
 Transform:
