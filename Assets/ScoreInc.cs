@@ -33,6 +33,7 @@ public class ScoreInc : MonoBehaviour
             Debug.Log("Game Over");
         }
 
+        //can use for screen
         Debug.Log(score);
     }
 }
