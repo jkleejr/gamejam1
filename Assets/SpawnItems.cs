@@ -18,7 +18,7 @@ public class SpawnItems : MonoBehaviour
             Vector3 SpawnPos = new Vector3(Random.Range(-horizontalVariation, horizontalVariation),
                 transform.position.y, 0);
             
-            GameObject spawnedItem = Instantiate(items[Random.Range(0, items.Length - 1)], SpawnPos, Quaternion.identity);
+            GameObject spawnedItem = Instantiate(items[Random.Range(0,items.Length-1)], SpawnPos, Quaternion.identity);
             totalTime = 0;
         }
 
