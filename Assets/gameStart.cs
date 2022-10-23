@@ -10,6 +10,7 @@ public class gameStart : MonoBehaviour
 {
     public void PlayGame()
     {
+        PlayerPrefs.SetInt("Score", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //build settings - first scene index is 0, +1 to go to scene w/ index 1
 
@@ -19,6 +20,7 @@ public class gameStart : MonoBehaviour
 
     public void QuitGame()
     {
+        PlayerPrefs.SetInt("Score", 0);
         Application.Quit();
 
     }

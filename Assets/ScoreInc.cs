@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
+using UnityEngine.SceneManagement;
 
 public class ScoreInc : MonoBehaviour
 {
-    private int score;
+    public TMP_Text scoreText;
+    
+    public int score;
     public GameObject itemcollider;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,10 +35,11 @@ public class ScoreInc : MonoBehaviour
         }
         else if (collision.CompareTag("VeryBadItem"))
         {
-            Debug.Log("Game Over");
+            PlayerPrefs.SetInt("Score", score);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         //can use for screen
-        Debug.Log(score);
+        scoreText.text = "Score:" + score.ToString();
     }
 }
