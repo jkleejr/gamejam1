@@ -14,13 +14,8 @@ GameObject:
   - component: {fileID: 376910603543074770}
   - component: {fileID: 264643173878725734}
   m_Layer: 0
-<<<<<<< HEAD:Assets/batgif (1).prefab
-  m_Name: batgif (1)
-  m_TagString: VeryBadItem
-=======
   m_Name: batEnemy
   m_TagString: Enemy
->>>>>>> 914a47520d81520cb0edb0f35e177a208207ea3a:Assets/batEnemy.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

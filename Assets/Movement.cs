@@ -7,7 +7,13 @@ public class Movement : MonoBehaviour
     //public CharacterController controller;
     public float speed = 12f;
     private int score;
+    private Vector2 screenBounds;
 
+    void Start()
+    {
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+    }
+    
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -23,7 +29,7 @@ public class Movement : MonoBehaviour
         float horizOffset = horizontalMove * speed * Time.deltaTime;
 
         float rawHorizPos = transform.position.x + horizOffset;
-        float clampedHorizPos = Mathf.Clamp(rawHorizPos, -7.4f, 7.4f);
+        float clampedHorizPos = Mathf.Clamp(rawHorizPos, screenBounds.x * -1, screenBounds.x);
 
         transform.position = new Vector3(clampedHorizPos, transform.position.y, transform.position.z);
     }
