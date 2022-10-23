@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Candy
-  - Despawner
-  - BadItem
-<<<<<<< HEAD
-  - VeryBadItem
-=======
-  - Enemy
->>>>>>> 914a47520d81520cb0edb0f35e177a208207ea3a
+  tags: []
   layers:
   - Default
   - TransparentFX
