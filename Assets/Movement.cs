@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
     private int score;
     private Vector2 screenBounds;
 
+    [SerializeField] private AudioSource movementSoundEffect;
+
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
@@ -17,7 +19,19 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+
+            movementSoundEffect.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            
+
+            movementSoundEffect.Play();
+        }
+
+
         /*float x = Input.GetAxis("Horizontal");
         
         Vector3 move = transform.right * x;

@@ -14,16 +14,16 @@ public class ScoreInc : MonoBehaviour
 
 
     //sound for score when collision
-    //[SerializeField] private AudioSource endGameSoundEffect;
-    //[SerializeField] private AudioSource scoreUpSoundEffect;
-    //[SerializeField] private AudioSource scoreDownSoundEffect;
+    [SerializeField] private AudioSource endGameSoundEffect;
+    [SerializeField] private AudioSource scoreUpSoundEffect;
+    [SerializeField] private AudioSource scoreDownSoundEffect;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Candy"))
         {
-            //scoreUpSoundEffect.Play();
+            scoreUpSoundEffect.Play();
 
             score += 1;
             if (score > 0 && score % 5 == 0)
@@ -33,7 +33,7 @@ public class ScoreInc : MonoBehaviour
         }
         else if (collision.CompareTag("BadItem"))
         {
-            //scoreDownSoundEffect.Play();
+            scoreDownSoundEffect.Play();
 
             if (score == 0) 
             {
@@ -46,15 +46,18 @@ public class ScoreInc : MonoBehaviour
         }
         else if (collision.CompareTag("VeryBadItem"))
         {
+            endGameSoundEffect.Play();
+
             PlayerPrefs.SetInt("Score", score);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Invoke("LoadScene", 0.2f);
         }
-
-        //for losing game sound
-        //endGameSoundEffect.Play();
-
 
         //can use for screen
         scoreText.text = "Score:" + score.ToString();
+    }
+
+    void LoadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
