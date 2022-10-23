@@ -5,23 +5,17 @@ using UnityEngine;
 public class ScoreInc : MonoBehaviour
 {
     private int score;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject itemcollider;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Candy"))
         {
             score += 1;
+            if (score > 0 && score % 5 == 0) 
+            {
+                itemcollider.GetComponent<SpawnItems>().spawnerInterval -= 0.1f;
+            }
         }
         else if (collision.CompareTag("BadItem"))
         {
@@ -33,6 +27,10 @@ public class ScoreInc : MonoBehaviour
             {
                 score -=1;
             }
+        }
+        else if (collision.CompareTag("VeryBadItem"))
+        {
+            Debug.Log("Game Over");
         }
 
         Debug.Log(score);
