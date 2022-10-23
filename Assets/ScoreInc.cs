@@ -5,26 +5,31 @@ using UnityEngine;
 public class ScoreInc : MonoBehaviour
 {
     private int score;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject itemcollider;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    //sound for score when collision
+    //[SerializeField] private AudioSource endGameSoundEffect;
+    //[SerializeField] private AudioSource scoreUpSoundEffect;
+    //[SerializeField] private AudioSource scoreDownSoundEffect;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Candy"))
         {
+            //scoreUpSoundEffect.Play();
+
             score += 1;
+            if (score > 0 && score % 5 == 0)
+            {
+                itemcollider.GetComponent<SpawnItems>().spawnerInterval -= 0.1f;
+            }
         }
         else if (collision.CompareTag("BadItem"))
         {
+            //scoreDownSoundEffect.Play();
+
             if (score == 0) 
             {
                 score = 0;
@@ -34,6 +39,18 @@ public class ScoreInc : MonoBehaviour
                 score -=1;
             }
         }
+        else if (collision.CompareTag("VeryBadItem"))
+        {
+            Debug.Log("Game Over");
+            //send to game over screen scene, or display game over screen over main scene
+
+
+
+        }
+
+        //for losing game sound
+        //endGameSoundEffect.Play();
+
 
         //can use for screen
         Debug.Log(score);
