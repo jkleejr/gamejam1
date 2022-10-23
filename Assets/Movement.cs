@@ -14,10 +14,8 @@ public class Movement : MonoBehaviour
         
         float x = Input.GetAxis("Horizontal");
         
-        Vector3 move = transform.position;
-        move.x = Mathf.Clamp(move.x, -7.4f, 7.4f);
-        transform.position = move;
+        Vector3 move = transform.right * x;
         
-        //controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * speed * Time.deltaTime);
     }
 }
