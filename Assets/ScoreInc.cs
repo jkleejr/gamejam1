@@ -35,6 +35,7 @@ public class ScoreInc : MonoBehaviour
             }
         }
 
+        //can use for screen
         Debug.Log(score);
     }
 }
