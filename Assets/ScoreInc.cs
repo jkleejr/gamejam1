@@ -12,18 +12,29 @@ public class ScoreInc : MonoBehaviour
     public int score;
     public GameObject itemcollider;
 
+
+    //sound for score when collision
+    //[SerializeField] private AudioSource endGameSoundEffect;
+    //[SerializeField] private AudioSource scoreUpSoundEffect;
+    //[SerializeField] private AudioSource scoreDownSoundEffect;
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Candy"))
         {
+            //scoreUpSoundEffect.Play();
+
             score += 1;
-            if (score > 0 && score % 5 == 0) 
+            if (score > 0 && score % 5 == 0)
             {
                 itemcollider.GetComponent<SpawnItems>().spawnerInterval -= 0.1f;
             }
         }
         else if (collision.CompareTag("BadItem"))
         {
+            //scoreDownSoundEffect.Play();
+
             if (score == 0) 
             {
                 score = 0;
@@ -38,6 +49,10 @@ public class ScoreInc : MonoBehaviour
             PlayerPrefs.SetInt("Score", score);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
+        //for losing game sound
+        //endGameSoundEffect.Play();
+
 
         //can use for screen
         scoreText.text = "Score:" + score.ToString();
