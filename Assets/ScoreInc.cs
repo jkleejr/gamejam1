@@ -49,10 +49,15 @@ public class ScoreInc : MonoBehaviour
             endGameSoundEffect.Play();
 
             PlayerPrefs.SetInt("Score", score);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Invoke("LoadScene", 0.2f);
         }
 
         //can use for screen
         scoreText.text = "Score:" + score.ToString();
+    }
+
+    void LoadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4069129121132738096}
   - component: {fileID: 4069129121132738099}
   - component: {fileID: 4371477459809587484}
+  - component: {fileID: 9187955580901242013}
   - component: {fileID: -8717951958192407822}
   m_Layer: 0
   m_Name: WrappedCandy
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4069129121132738098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.706, y: -2.5373, z: 0}
-  m_LocalScale: {x: 5.866441, y: 6.239219, z: 1}
+  m_LocalPosition: {x: -5.4211, y: -2.3223, z: 0}
+  m_LocalScale: {x: 9.427322, y: 8.926054, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,6 +135,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.12990302, y: 0.12195437}
   m_EdgeRadius: 0
+--- !u!114 &9187955580901242013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4069129121132738098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d18a6367a3ec46c59217bcaabfc6255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 500
 --- !u!114 &-8717951958192407822
 MonoBehaviour:
   m_ObjectHideFlags: 0

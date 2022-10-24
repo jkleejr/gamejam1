@@ -495,7 +495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  movementSoundEffect: {fileID: 256586435}
 --- !u!82 &256586435
 AudioSource:
   m_ObjectHideFlags: 0
@@ -636,6 +635,8 @@ MonoBehaviour:
   - {fileID: 2652119878944623271, guid: ee4459efd58cf4ffeb4f64a1fdf11e15, type: 3}
   - {fileID: 264643173878725735, guid: 79a16b9999c1d43299e8b595a95c8bd2, type: 3}
   - {fileID: 2387341337052888084, guid: 72702128bbb1447888dbb21d2fe71f26, type: 3}
+  - {fileID: 5705676020097221827, guid: b0c77c408cc1a42c3939fad372de5dde, type: 3}
+  - {fileID: 1313994635972003029, guid: 393864d0cf6f548079ec774b19e54614, type: 3}
   spawnerInterval: 1
 --- !u!4 &345031344
 Transform:
@@ -2124,7 +2125,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f2ad53bacc245642854dbdc8ea71a9b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.95
   m_Pitch: 1
   Loop: 1
   Mute: 0
